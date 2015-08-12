@@ -28,10 +28,10 @@ end)
 hotkey.bind({"cmd", "alt", "ctrl"}, "A", function()
   application.launchOrFocus("Activity Monitor")
 end)
-
-hotkey.bind({"cmd", "alt", "ctrl"}, ";", function()
-  hs.caffeinate.systemSleep()
+hotkey.bind({"cmd", "alt", "ctrl"}, "L", function()
+  hs.caffeinate.startScreensaver()
 end)
+
 hotkey.bind({"cmd", "alt", "ctrl"}, "T", function()
   alert.show("Hello World!")
 end)
