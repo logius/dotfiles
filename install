@@ -1,34 +1,21 @@
 #! /bin/bash
 
 # Set up symlinks
-# ln -nfs "$(pwd)/ruby/.gemrc"            "$HOME/.gemrc"
-# ln -nfs "$(pwd)/ruby/.irbrc"            "$HOME/.irbrc"
+ln -nfs "$(pwd)/.gemrc"            "$HOME/.gemrc"
+ln -nfs "$(pwd)/.irbrc"            "$HOME/.irbrc"
 
 # ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 # ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
 # ln -nfs "$(pwd)/.ruby-version"          "$HOME/.ruby-version"
 
-# ln -nfs "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" "$HOME/.bin/sub"
-# ln -nfs "$(pwd)/bin/git-fixup" "$HOME/.bin/git-fixup"
-# ln -nfs "$(pwd)/bin/e" "$HOME/.bin/e"
-#
-# SUBLIME_DIR="$HOME/Library/Application Support/Sublime Text 2/Packages/User"
-# ln -nfs "$(pwd)/sublime/Preferences.sublime-settings" "$SUBLIME_DIR/Preferences.sublime-settings"
-# ln -nfs "$(pwd)/sublime/Default (OSX).sublime-keymap" "$SUBLIME_DIR/Default (OSX).sublime-keymap"
-#
-# ln -nfs "$(pwd)/vim/.vimrc"             "$HOME/.vimrc"
-# ln -nfs "$(pwd)/vim/.gvimrc"            "$HOME/.gvimrc"
-# ln -nfs "$(pwd)/vim/.vim"               "$HOME/.vim"
-# ln -nfs "$(pwd)/ack/.ackrc"             "$HOME/.ackrc"
 ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
 #
-# ln -nfs "$(pwd)/git/.gitignore_global"  "$HOME/.gitignore_global"
-# ln -nfs "$(pwd)/git/.tigrc"  "$HOME/.tigrc"
+ln -nfs "$(pwd)/.gitignore_global"  "$HOME/.gitignore_global"
 
 # Copy powerlines
-# for file in ./powerline-fonts/Meslo/*.otf; do
-#   cp -f "$file" "$HOME/Library/Fonts/"
-# done
+for file in ./powerline-fonts/Meslo/*.otf; do
+  cp -f "$file" "$HOME/Library/Fonts/"
+done
 
 # https://github.com/postmodern/chruby/issues/196#issuecomment-23826171
 # [[ -e /etc/zshenv ]] && sudo mv /etc/zshenv /etc/zprofile

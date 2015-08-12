@@ -1,3 +1,4 @@
+-- TODO: Update the muter to ignore muting on different docks
 local screen = require "hs.screen"
 local audiodevice = require "hs.audiodevice"
 local alert = require "hs.alert"

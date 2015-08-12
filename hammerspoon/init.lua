@@ -3,7 +3,7 @@ local hotkey = require "hs.hotkey"
 local alert = require "hs.alert"
 
 require "triggers"
-require "auto_muter"
+-- require "auto_muter"
 require "application_watcher"
 
 alert.show("Hammerspoon loaded!")

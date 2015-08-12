@@ -1,0 +1,9 @@
+.powrc
+coffeelint.json
+.powder
+.capistrano
+.env
+.DS_store
+public/public
+.env.development
+.git-project
