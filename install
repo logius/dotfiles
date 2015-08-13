@@ -20,10 +20,11 @@ done
 # https://github.com/postmodern/chruby/issues/196#issuecomment-23826171
 # [[ -e /etc/zshenv ]] && sudo mv /etc/zshenv /etc/zprofile
 
-# git config --global user.email "gabriel@keplar.nl"
-# git config --global user.name "Gabriel G. Lescinskas"
-# git config --global core.excludesfile "$HOME/.gitignore_global"
-# git config --global color.diff always
-# git config --global merge.ff only
-# git config --global push.default current
-# git config --global remote.origin.prune true
+git config --global user.email "gabriel@keplar.nl"
+git config --global user.name "Gabriel G. Lescinskas"
+git config --global core.excludesfile "$HOME/.gitignore_global"
+git config --global color.diff always
+git config --global merge.ff only
+git config --global push.default current
+git config --global remote.origin.prune true
+git config --global rebase.autosquash true
