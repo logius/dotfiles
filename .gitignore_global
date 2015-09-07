@@ -7,3 +7,4 @@ coffeelint.json
 public/public
 .env.development
 .git-project
+dump.rdb
