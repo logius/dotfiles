@@ -10,6 +10,12 @@ source "$ZSH_DIR/git.zsh"
 # Theme
 source "$ZSH_DIR/appearance.zsh"
 
+# Bundler
+source "$ZSH_DIR/bundler.zsh"
+
+# Rails
+source "$ZSH_DIR/rails.zsh"
+
 # Aliases
 source "$ZSH_DIR/aliases.zsh"
 
