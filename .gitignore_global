@@ -8,3 +8,4 @@ public/public
 .env.development
 .git-project
 dump.rdb
+spec/examples.txt
