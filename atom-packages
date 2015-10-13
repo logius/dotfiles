@@ -1,0 +1,34 @@
+#! /bin/bash
+
+apm install Sublime-Style-Column-Selection \
+  atom-material-syntax \
+  atom-material-ui \
+  autocomplete-sass \
+  capybara-snippets \
+  coffee-autocompile \
+  color-picker \
+  emmet \
+  file-icons \
+  flex-tool-bar \
+  git-history \
+  isotope-ui \
+  jslint \
+  language-dotenv \
+  language-haml \
+  language-lua \
+  language-rspec \
+  linter \
+  linter-coffeelint \
+  linter-erb \
+  linter-eslint \
+  linter-rubocop \
+  linter-ruby \
+  linter-scss-lint \
+  merge-conflicts \
+  omni-ruler \
+  pain-split \
+  rspec-snippets \
+  seti-syntax \
+  seti-ui \
+  tool-bar \
+  zentabs
