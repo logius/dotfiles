@@ -79,7 +79,6 @@ alias grbs="git rebase --skip"
 alias gst="git status"
 
 alias gfix="git commit --fixup"
-alias gfixd="git commit --fixup $(git rev-parse HEAD)"
 alias gsq="git commit --squash"
 
 #

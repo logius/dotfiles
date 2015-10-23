@@ -12,11 +12,11 @@ source "$ZSH_DIR/appearance.zsh"
 
 # Bundler
 source "$ZSH_DIR/bundler.zsh"
-
-# Rails
+#
+# # Rails
 source "$ZSH_DIR/rails.zsh"
-
-# Aliases
+#
+# # Aliases
 source "$ZSH_DIR/aliases.zsh"
 
 # Base paths
