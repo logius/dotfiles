@@ -17,9 +17,6 @@ for file in ./powerline-fonts/Meslo/*.otf; do
   cp -f "$file" "$HOME/Library/Fonts/"
 done
 
-# https://github.com/postmodern/chruby/issues/196#issuecomment-23826171
-# [[ -e /etc/zshenv ]] && sudo mv /etc/zshenv /etc/zprofile
-
 git config --global user.email "gabriel@keplar.nl"
 git config --global user.name "Gabriel G. Lescinskas"
 git config --global core.excludesfile "$HOME/.gitignore_global"
