@@ -27,10 +27,8 @@ alias ggpull="git pull origin $(current_branch)"
 alias ggpush="git push origin $(current_branch)"
 alias ggpur="ggu"
 
-
 alias gst="git status"
 alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
 
 alias gm="git merge"
 alias grb="git rebase"
@@ -39,7 +37,6 @@ alias grbc="git rebase --continue"
 alias grbi="git rebase -i"
 alias grbm="git rebase master"
 alias grbs="git rebase --skip"
-
 
 alias gfix="git commit --fixup"
 alias gsq="git commit --squash"
