@@ -12,6 +12,8 @@ alias pdbreset="powder stop && bundle exec rake db:drop db:create db:migrate SEE
 # GIT
 #
 
+alias g="git"
+
 alias ga="git add"
 alias gaa="git add --all"
 alias gb="git branch"
@@ -24,7 +26,7 @@ alias gfa="git fetch --all --prune"
 alias ggsup="git branch --set-upstream-to=origin/$(current_branch)"
 
 alias ggpull="git pull origin $(current_branch)"
-alias ggpush="git push origin $(current_branch)"
+alias ggpush="ggp"
 alias ggpur="ggu"
 
 alias gst="git status"
