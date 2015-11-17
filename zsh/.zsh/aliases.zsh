@@ -41,7 +41,7 @@ alias grbm="git rebase master"
 alias grbs="git rebase --skip"
 
 alias gfix="git commit --fixup"
-alias gfixd="gfix $(git rev-parse HEAD)"
+alias gfixd="git commit --fixup $(last_commit_hash)"
 alias gsq="git commit --squash"
 
 #

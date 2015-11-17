@@ -31,6 +31,17 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
+function last_commit_hash() {
+  local ref
+  ref=$(git rev-parse --short HEAD 2> /dev/null)
+  local ret=$?
+  if [[ $ret != 0 ]]; then
+    [[ $ret == 128 ]] && return  # no git repo.
+    ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  fi
+  echo ${ref#refs/heads/}
+}
+
 ggf() {
   [[ "$#" != 1 ]] && local b="$(current_branch)"
   git push --force origin "${b:=$1}"
