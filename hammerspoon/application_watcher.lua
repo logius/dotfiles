@@ -1,7 +1,7 @@
 local hotkey = require "hs.hotkey"
 local alert = require "hs.alert"
 
-auto_hide = true
+auto_hide = false
 hotkey.bind({"cmd", "alt", "ctrl"}, "H", function()
   auto_hide = not auto_hide
   message = "Auto hide disabled"
