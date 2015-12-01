@@ -17,7 +17,7 @@ for file in ./powerline-fonts/Meslo/*.otf; do
   cp -f "$file" "$HOME/Library/Fonts/"
 done
 
-git config --global user.email "gabriel@keplar.nl"
+git config --global user.email "gabrielglescinskas@gmail.com"
 git config --global user.name "Gabriel G. Lescinskas"
 git config --global core.excludesfile "$HOME/.gitignore_global"
 git config --global color.diff always
