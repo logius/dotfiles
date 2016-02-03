@@ -5,11 +5,9 @@ apm install Sublime-Style-Column-Selection \
   atom-material-ui \
   autocomplete-sass \
   capybara-snippets \
-  coffee-autocompile \
   color-picker \
   emmet \
   file-icons \
-  flex-tool-bar \
   git-history \
   isotope-ui \
   jslint \
@@ -30,5 +28,4 @@ apm install Sublime-Style-Column-Selection \
   rspec-snippets \
   seti-syntax \
   seti-ui \
-  tool-bar \
   zentabs

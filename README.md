@@ -16,6 +16,25 @@ Run:
 
 `xcode-select --install`
 
+### Homebrew
+
+Next, install [Homebrew](http://mxcl.github.com/homebrew/) using the following
+command.
+
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+After installing Homebrew, ensure permissions are correct by running the
+following.
+
+```
+sudo chown -R "$USER" /usr/local
+brew update
+
+brew bundle --file=Brewfile
+```
+
 ### Environment, ZSH, Sublime configuration
 
 Clone this dotfiles Git repository to your $HOME directory
@@ -37,25 +56,9 @@ Hook everything up by running the `install` script.
 
 ### OSX defaults
 
-`./.osx`
-
-### Homebrew
-
-Next, install [Homebrew](http://mxcl.github.com/homebrew/) using the following
-command.
-
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-After installing Homebrew, ensure permissions are correct by running the
-following.
-
-```
-sudo chown -R "$USER" /usr/local
-brew update
-
-brew bundle Brewfile
+chmod +x .osx
+./.osx
 ```
 
 ### ZSH
@@ -63,7 +66,7 @@ brew bundle Brewfile
 Set it as the default shell:
 
 ```
-chsh -s $(which zsh)
+chsh -s /bin/zsh
 ```
 
 ### Chruby and ruby-install
@@ -80,5 +83,5 @@ ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
 
 **CoffeeScript language.**
 ```
-npm install coffee-script
+npm install coffee-script --global
 ```
