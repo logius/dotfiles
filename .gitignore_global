@@ -10,3 +10,4 @@ public/public
 dump.rdb
 spec/examples.txt
 .tags
+.tags*
