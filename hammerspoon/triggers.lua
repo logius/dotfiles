@@ -35,10 +35,10 @@ hotkey.bind({"cmd"}, "1", function()
 end)
 
 hotkey.bind({"cmd"}, "2", function()
-  if applicationRunning("Atom") then
-    application.launchOrFocus("Atom")
+  if applicationRunning("Sublime Text") then
+    application.launchOrFocus("Sublime Text")
   else
-    alert.show("Atom not running")
+    alert.show("Sublime Text not running")
     application.launchOrFocus("iTerm")
   end
 end)
