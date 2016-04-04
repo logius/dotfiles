@@ -28,4 +28,5 @@ apm install Sublime-Style-Column-Selection \
   rspec-snippets \
   seti-syntax \
   seti-ui \
-  zentabs
+  zentabs \
+  language-slim
