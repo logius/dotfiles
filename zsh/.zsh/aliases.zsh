@@ -59,3 +59,4 @@ alias bubu="bubo && bubc"
 
 alias zshconfig="atom ~/.zshrc"
 alias known_hosts="atom ~/.ssh/known_hosts"
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
