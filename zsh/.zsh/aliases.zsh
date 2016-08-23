@@ -6,7 +6,7 @@ alias dbstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias dbstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 alias dbreset="bundle exec rake db:migrate:reset && SEED_DEMO=1 bundle exec rake db:seed"
-alias pdbreset="powder stop && bundle exec rake db:migrate:reset && SEED_DEMO=1 bundle exec rake db:seed && powder start"
+alias pdbreset="dbreset"
 
 #
 # GIT
