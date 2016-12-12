@@ -19,10 +19,8 @@ brew "imagemagick"
 brew "jpegoptim"
 brew "optipng"
 brew "htop-osx"
-brew "qt"
+brew "qt5"
 brew "blueutil"
-
-brew "macvim"
 
 brew "chruby"
 brew "ruby-install"
