@@ -9,9 +9,6 @@ ln -nfs "$(pwd)/.ruby-version"          "$HOME/.ruby-version"
 ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
 ln -nfs "$(pwd)/.gitignore_global"  "$HOME/.gitignore_global"
 
-ln -nfs "$(pwd)/atom/keymap.cson"  "$HOME/.atom/keymap.cson"
-ln -nfs "$(pwd)/atom/style.less"  "$HOME/.atom/style.less"
-
 # Copy powerlines
 for file in ./powerline-fonts/Meslo/*.otf; do
   cp -f "$file" "$HOME/Library/Fonts/"
