@@ -75,18 +75,6 @@ chsh -s /bin/zsh
 ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
 ```
 
-### Sync Sublime 3 setup
-
-```bash
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-rm -r User
-ln -s ~/Dropbox/Persistance/Sublime/User
-```
-
-### Atom
-
-`./atom-packages`
-
 ### Misc. Utilities
 
 **CoffeeScript language.**

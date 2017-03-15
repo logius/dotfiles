@@ -35,10 +35,7 @@ brew "node"
 brew "phantomjs"
 
 cask "iterm2"
-cask "dropbox"
-cask "1password"
-cask "google-chrome"
 cask "hammerspoon"
 cask "sublime-text3"
-cask "skype"
-cask "vlc"
+
+brew "elasticsearch@2.4"
