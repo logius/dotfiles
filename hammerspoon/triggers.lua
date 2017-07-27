@@ -46,7 +46,7 @@ hotkey.bind({"cmd"}, "3", function()
   application.launchOrFocus("Google Chrome")
 end)
 hotkey.bind({"cmd"}, "4", function()
-  application.launchOrFocus("Xcode")
+  application.launchOrFocus("Franz")
 end)
 hotkey.bind({"cmd"}, "5", function()
   if applicationRunning("Simulator") then
