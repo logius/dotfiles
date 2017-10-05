@@ -1,12 +1,12 @@
 #! /bin/bash
 
 # Set up symlinks
-ln -nfs "$(pwd)/.gemrc"            "$HOME/.gemrc"
-ln -nfs "$(pwd)/.irbrc"            "$HOME/.irbrc"
-ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
-ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
-ln -nfs "$(pwd)/.ruby-version"          "$HOME/.ruby-version"
-ln -nfs "$(pwd)/hammerspoon"            "$HOME/.hammerspoon"
+ln -nfs "$(pwd)/.gemrc"             "$HOME/.gemrc"
+ln -nfs "$(pwd)/.irbrc"             "$HOME/.irbrc"
+ln -nfs "$(pwd)/zsh/.zshrc"         "$HOME/.zshrc"
+ln -nfs "$(pwd)/zsh/.zsh"           "$HOME/.zsh"
+ln -nfs "$(pwd)/.ruby-version"      "$HOME/.ruby-version"
+ln -nfs "$(pwd)/hammerspoon"        "$HOME/.hammerspoon"
 ln -nfs "$(pwd)/.gitignore_global"  "$HOME/.gitignore_global"
 
 # Copy powerlines
