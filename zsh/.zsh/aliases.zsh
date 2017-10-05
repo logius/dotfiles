@@ -57,6 +57,6 @@ alias bubu="bubo && bubc"
 # Other
 #
 
-alias zshconfig="atom ~/.zshrc"
-alias known_hosts="atom ~/.ssh/known_hosts"
+alias zshconfig="subl ~/.zshrc"
+alias known_hosts="subl ~/.ssh/known_hosts"
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
