@@ -15,12 +15,15 @@ bindkey "^[[Z" reverse-menu-complete
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 
-# Jump words with Alt + arrow
-bindkey "^[[1;9C" forward-word
-bindkey "^[[1;9D" backward-word
-
 # Backspace deletes character
 bindkey '^?' backward-delete-char
 # Delete deletes character
 # Delete key (or Fn + Delete on the Mac) work instead of outputting a ~
 bindkey "^[[3~" delete-char
+
+# Jumps world left and right (Alt + arrow)
+bindkey '^[F' forward-word
+bindkey '^[B' backward-word
+
+bindkey "^[[C" end-of-line
+bindkey "^[[D" beginning-of-line
