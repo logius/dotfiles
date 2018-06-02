@@ -8,6 +8,7 @@ source "$ZSH_DIR/functions.zsh"
 source "$ZSH_DIR/git.zsh"
 
 # Theme
+source "$ZSH_DIR/themes/powerlevel9k/powerlevel9k.zsh-theme"
 source "$ZSH_DIR/appearance.zsh"
 
 # Bundler
