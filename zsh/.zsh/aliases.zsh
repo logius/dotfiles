@@ -1,14 +1,4 @@
 #
-# Database
-#
-
-alias dbstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias dbstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
-alias dbreset="bundle exec rake db:migrate:reset && SEED_DEMO=1 bundle exec rake db:seed"
-alias pdbreset="dbreset"
-
-#
 # GIT
 #
 
