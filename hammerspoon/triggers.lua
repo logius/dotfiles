@@ -61,11 +61,7 @@ hotkey.bind({"alt"}, "1", function()
 end)
 
 hotkey.bind({"alt"}, "2", function()
-  application.launchOrFocus("HipChat")
-end)
-
-hotkey.bind({"alt"}, "3", function()
-  application.launchOrFocus("Sunrise Calendar")
+  application.launchOrFocus("Slack")
 end)
 
 hotkey.bind({"ctrl"}, "2", function()
