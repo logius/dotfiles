@@ -25,5 +25,5 @@ bindkey "^[[3~" delete-char
 bindkey '^[F' forward-word
 bindkey '^[B' backward-word
 
-bindkey "^[[C" end-of-line
-bindkey "^[[D" beginning-of-line
+# bindkey "^[[C" end-of-line
+# bindkey "^[[D" beginning-of-line
