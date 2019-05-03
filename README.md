@@ -16,6 +16,20 @@ Run:
 
 `xcode-select --install`
 
+### Setup
+
+Clone this repository to your $HOME directory
+```
+mkdir $HOME/dotfiles
+git clone git://github.com/logius/dotfiles.git $HOME/dotfiles
+```
+
+Initialize and/or update the submodules
+```
+cd $HOME/dotfiles && git submodule init && \
+  git submodule update --recursive
+```
+
 ### Homebrew
 
 Next, install [Homebrew](http://mxcl.github.com/homebrew/) using the following
@@ -35,19 +49,7 @@ brew update
 brew bundle --file=Brewfile
 ```
 
-### Environment, ZSH, Sublime configuration
-
-Clone this dotfiles Git repository to your $HOME directory
-```
-mkdir $HOME/dotfiles
-git clone git://github.com/logius/dotfiles.git $HOME/dotfiles
-```
-
-Initialize and/or update the submodules
-```
-cd $HOME/dotfiles && git submodule init && \
-  git submodule update --recursive
-```
+### Instalation
 
 Hook everything up by running the `install` script.
 ```
@@ -63,7 +65,7 @@ chmod +x .osx
 
 ### ZSH
 
-Set it as the default shell:
+Set ZSH as the default shell:
 
 ```
 chsh -s /bin/zsh
@@ -73,16 +75,8 @@ chsh -s /bin/zsh
 
 ```bash
 ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
-```
 
 ### Atom
 
 `./atom-packages`
-
-### Misc. Utilities
-
-**CoffeeScript language.**
-```
-npm install coffee-script --global
-npm install coffeelint --global
 ```
