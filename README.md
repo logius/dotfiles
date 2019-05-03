@@ -75,8 +75,4 @@ chsh -s /bin/zsh
 
 ```bash
 ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
-
-### Atom
-
-`./atom-packages`
 ```
