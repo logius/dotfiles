@@ -19,4 +19,3 @@ bindkey '^[[B' down-line-or-search
 bindkey '^?' backward-delete-char
 # Delete deletes character
 # Delete key (or Fn + Delete on the Mac) work instead of outputting a ~
-bindkey "^[[3~" delete-char

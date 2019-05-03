@@ -1,3 +1,5 @@
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
 #
 # GIT
 #
@@ -15,7 +17,7 @@ alias gcp="git cherry-pick"
 alias gfa="git fetch --all --prune"
 alias ggsup="git branch --set-upstream-to=origin/$(current_branch)"
 
-alias ggpull="git pull origin $(current_branch)"
+alias ggpull="ggl"
 alias ggpush="ggp"
 alias ggpur="ggu"
 
