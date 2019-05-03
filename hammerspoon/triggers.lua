@@ -20,12 +20,6 @@ end
 hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
 end)
-hotkey.bind({"cmd", "alt", "ctrl"}, "C", function()
-  hs.openConsole()
-end)
-hotkey.bind({"cmd", "alt", "ctrl"}, "A", function()
-  application.launchOrFocus("Activity Monitor")
-end)
 hotkey.bind({"cmd", "alt", "ctrl"}, "L", function()
   hs.caffeinate.startScreensaver()
 end)
@@ -44,38 +38,4 @@ hotkey.bind({"cmd"}, "2", function()
 end)
 hotkey.bind({"cmd"}, "3", function()
   application.launchOrFocus("Google Chrome")
-end)
-hotkey.bind({"cmd"}, "4", function()
-  application.launchOrFocus("Franz")
-end)
-hotkey.bind({"cmd"}, "5", function()
-  if applicationRunning("Simulator") then
-    application.launchOrFocus("Simulator")
-  else
-    alert.show("Simulator not running")
-  end
-end)
-
-hotkey.bind({"alt"}, "1", function()
-  application.launchOrFocus("Spotify")
-end)
-
-hotkey.bind({"alt"}, "2", function()
-  application.launchOrFocus("HipChat")
-end)
-
-hotkey.bind({"alt"}, "3", function()
-  application.launchOrFocus("Sunrise Calendar")
-end)
-
-hotkey.bind({"ctrl"}, "2", function()
-  application.launchOrFocus("Mail")
-end)
-
-hotkey.bind({"ctrl"}, "E", function()
-  application.launchOrFocus("Finder")
-end)
-
-hotkey.bind({"ctrl"}, "§", function()
-  application.launchOrFocus("1Password 6")
 end)

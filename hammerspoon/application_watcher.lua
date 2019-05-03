@@ -11,7 +11,7 @@ hotkey.bind({"cmd", "alt", "ctrl"}, "H", function()
   alert.show(message)
 end)
 
-auto_hide_applications = {"Finder", "Safari", "Wunderlist", "Sunrise"}
+auto_hide_applications = {"Finder", "Safari", "Wunderlist"}
 watcher = hs.application.watcher.new(function(name, event, app)
   if auto_hide == false then
     return

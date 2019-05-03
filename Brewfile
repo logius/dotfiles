@@ -6,7 +6,6 @@ brew "python"
 brew "lua"
 brew "go"
 
-brew "openssh"
 brew "libyaml"
 
 brew "git"
@@ -33,12 +32,4 @@ brew "memcached"
 
 brew "node"
 brew "phantomjs"
-
-cask "iterm2"
-cask "dropbox"
-cask "1password"
-cask "google-chrome"
 cask "hammerspoon"
-cask "sublime-text3"
-cask "skype"
-cask "vlc"

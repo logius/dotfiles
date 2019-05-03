@@ -8,6 +8,7 @@ source "$ZSH_DIR/functions.zsh"
 source "$ZSH_DIR/git.zsh"
 
 # Theme
+source "$ZSH_DIR/themes/powerlevel9k/powerlevel9k.zsh-theme"
 source "$ZSH_DIR/appearance.zsh"
 
 # Bundler
@@ -21,6 +22,9 @@ source "$ZSH_DIR/aliases.zsh"
 
 # Base paths
 export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:./bin:$PATH"
+
+# Iterm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # chruby
 source "/usr/local/share/chruby/chruby.sh"

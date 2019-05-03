@@ -1,16 +1,6 @@
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 #
-# Database
-#
-
-alias dbstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias dbstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
-alias dbreset="bundle exec rake db:migrate:reset && SEED_DEMO=1 bundle exec rake db:seed"
-alias pdbreset="dbreset"
-
-#
 # GIT
 #
 
@@ -62,3 +52,4 @@ alias bubu="bubo && bubc"
 alias zshconfig="subl ~/.zshrc"
 alias known_hosts="subl ~/.ssh/known_hosts"
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+alias gitx="smerge ."
