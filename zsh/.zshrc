@@ -8,8 +8,14 @@ source "$ZSH_DIR/functions.zsh"
 source "$ZSH_DIR/git.zsh"
 
 # Theme
-source "$ZSH_DIR/themes/powerlevel9k/powerlevel9k.zsh-theme"
-source "$ZSH_DIR/appearance.zsh"
+if [ "$SPIN" ]; then
+    source "$ZSH_DIR/spin-appearance.zsh"
+else
+    source "$ZSH_DIR/themes/powerlevel9k/powerlevel9k.zsh-theme"
+    source "$ZSH_DIR/appearance.zsh"
+fi
+
+
 
 # Bundler
 source "$ZSH_DIR/bundler.zsh"
