@@ -1,78 +1,55 @@
 # Dotfiles
 
-A collection of dotfiles to help setting up development environment. Pros and cons of dotfiles could be found [here](https://dotfiles.github.io/)
+Personal dotfiles for macOS. Targets Sequoia (15+), zsh, Warp, VS Code, Hammerspoon, Homebrew Ruby.
 
-# Usage
+## Install
 
-## Installation
-
-Follow this step-by-step installation.
-
-### XCode
-
-Install XCode through the Mac App Store.
-
-Run:
-
-`xcode-select --install`
-
-### Setup
-
-Clone this repository to your $HOME directory
-```
-mkdir $HOME/dotfiles
-git clone git://github.com/logius/dotfiles.git $HOME/dotfiles
-```
-
-Initialize and/or update the submodules
-```
-cd $HOME/dotfiles && git submodule init && \
-  git submodule update --recursive
-```
-
-### Homebrew
-
-Next, install [Homebrew](http://mxcl.github.com/homebrew/) using the following
-command.
-
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-After installing Homebrew, ensure permissions are correct by running the
-following.
-
-```
-sudo chown -R "$USER" /usr/local
-brew update
-
-brew bundle --file=Brewfile
-```
-
-### Instalation
-
-Hook everything up by running the `install` script.
-```
+```sh
+git clone git@github.com:<you>/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 ./install
+chmod +x .osx && ./.osx
 ```
 
-### OSX defaults
+## Per-machine config (`zsh/.zshrc.local`)
 
+Machine-specific secrets and git identity live in `zsh/.zshrc.local`. This
+file is **gitignored** but lives inside the repo so it sits alongside the
+rest of the zsh config; `install` symlinks it to `$HOME/.zshrc.local` and
+the main `.zshrc` sources it on shell startup.
+
+The tracked file [zsh/.zshrc.local.example](zsh/.zshrc.local.example) is the
+template. `install` copies it to `zsh/.zshrc.local` (with `chmod 600`) on
+first run if you don't already have one.
+
+Manual setup, equivalent to what `install` does:
+
+```sh
+cp zsh/.zshrc.local.example zsh/.zshrc.local
+chmod 600 zsh/.zshrc.local
+ln -nfs "$(pwd)/zsh/.zshrc.local" ~/.zshrc.local
+$EDITOR zsh/.zshrc.local   # set git email + secrets for this machine
 ```
-chmod +x .osx
-./.osx
-```
 
-### ZSH
+Use a different email on the personal vs work machine. Same dotfiles repo
+works on both — no diverging branches.
 
-Set ZSH as the default shell:
+## Ruby
 
-```
-chsh -s /bin/zsh
-```
+Ruby version manager init lives in `~/.zshrc.local` because the choice is
+per-machine:
 
-### Chruby and ruby-install
+- **Work**: `rbenv` (`brew install rbenv`)
+- **Home**: `chruby` + `ruby-install` (`brew install chruby ruby-install`)
 
-```bash
-ruby-install ruby [VERSION] ~/.rubies/ruby-[VERSION]
-```
+See [zsh/.zshrc.local.example](zsh/.zshrc.local.example) for the one-line init
+snippet for either. `.ruby-version` is symlinked into `$HOME`, so both
+managers auto-switch to it.
+
+## Layout
+
+- `zsh/.zshrc` + `zsh/.zsh/` — shell config, aliases, git helpers, bundler/rails shortcuts
+- `hammerspoon/` — window management + app hotkeys (⌘1 Warp, ⌘2 Code, ⌘3 Chrome, ⌘4 Spotify)
+- `.osx` — macOS defaults (Sequoia-compatible subset)
+- `.gemrc`, `.irbrc`, `.ruby-version` — Ruby config
+- `.gitignore_global` — global git ignore list
