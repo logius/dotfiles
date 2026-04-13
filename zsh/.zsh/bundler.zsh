@@ -8,36 +8,15 @@ alias bcn="bundle clean"
 
 bundled_commands=(
   annotate
-  cap
-  capify
-  cucumber
-  foodcritic
-  guard
   irb
-  jekyll
-  kitchen
-  knife
-  middleman
-  nanoc
   pry
   puma
   rackup
-  rainbows
   rake
-  rubocop
   rspec
-  shotgun
+  rubocop
   sidekiq
-  spec
-  spork
   spring
-  strainer
-  tailor
-  taps
-  thin
-  thor
-  unicorn
-  unicorn_rails
 )
 
 # Remove $UNBUNDLED_COMMANDS from the bundled_commands list
