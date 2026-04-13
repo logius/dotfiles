@@ -25,17 +25,20 @@ hotkey.bind({"cmd", "alt", "ctrl"}, "L", function()
 end)
 
 hotkey.bind({"cmd"}, "1", function()
-  application.launchOrFocus("iTerm")
+  application.launchOrFocus("Warp")
 end)
 
 hotkey.bind({"cmd"}, "2", function()
-  if applicationRunning("Sublime Text") then
-    application.launchOrFocus("Sublime Text")
+  if applicationRunning("Visual Studio Code") then
+    application.launchOrFocus("Visual Studio Code")
   else
-    alert.show("Sublime Text not running")
-    application.launchOrFocus("iTerm")
+    alert.show("Visual Studio Code not running")
+    application.launchOrFocus("Warp")
   end
 end)
 hotkey.bind({"cmd"}, "3", function()
   application.launchOrFocus("Google Chrome")
+end)
+hotkey.bind({"cmd"}, "4", function()
+  application.launchOrFocus("Spotify")
 end)
