@@ -1,41 +1,21 @@
 ZSH_DIR="$HOME/.zsh" # Path to my custom ZSH directory
 
-# Config
+# --- Environment: PATH, package managers, version managers ---
+export PATH="$HOME/.local/bin:$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
+
+# Homebrew (adds /opt/homebrew/bin to PATH, sets HOMEBREW_PREFIX, etc.)
+[[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Ruby version manager init lives in ~/.zshrc.local (rbenv on work,
+# chruby on home) — sourced at the bottom of this file.
+
+# --- Shell config ---
 source "$ZSH_DIR/config.zsh"
 source "$ZSH_DIR/functions.zsh"
-
-# Git functions
 source "$ZSH_DIR/git.zsh"
-
-# Theme
-if [ "$SPIN" ]; then
-    source "$ZSH_DIR/spin-appearance.zsh"
-else
-    source "$ZSH_DIR/themes/powerlevel9k/powerlevel9k.zsh-theme"
-    source "$ZSH_DIR/appearance.zsh"
-fi
-
-
-
-# Bundler
 source "$ZSH_DIR/bundler.zsh"
-#
-# # Rails
 source "$ZSH_DIR/rails.zsh"
-#
-# # Aliases
 source "$ZSH_DIR/aliases.zsh"
 
-# Base paths
-export PATH="$HOME/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:./bin:$PATH"
-
-# Iterm2
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# chruby
-
-[[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
-
-[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
-
-[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+# --- Machine-specific overrides (tokens, work git identity) — not tracked ---
+[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"

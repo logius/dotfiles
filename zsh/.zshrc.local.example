@@ -1,0 +1,31 @@
+# ~/.zshrc.local — machine-specific config.
+#
+# Copy this file to zsh/.zshrc.local (gitignored) and symlink it to
+# $HOME/.zshrc.local. The install script does this automatically if
+# zsh/.zshrc.local exists.
+#
+# chmod 600 the resulting file — it holds secrets.
+
+# --- Git identity for this machine ---
+# Personal machine: your personal email
+# Work machine:    your work email
+git config --global user.email "you@example.com"
+git config --global user.name  "Your Name"
+
+# --- Ruby version manager ---
+# Pick one for this machine. Both need to be installed via Homebrew first:
+#   brew install rbenv                  # work setup
+#   brew install chruby ruby-install    # home setup
+
+# rbenv:
+# command -v rbenv >/dev/null && eval "$(rbenv init - zsh)"
+
+# chruby (auto-switches based on .ruby-version):
+# if [[ -r "$HOMEBREW_PREFIX/share/chruby/chruby.sh" ]]; then
+#   source "$HOMEBREW_PREFIX/share/chruby/chruby.sh"
+#   source "$HOMEBREW_PREFIX/share/chruby/auto.sh"
+# fi
+
+# --- Secrets ---
+# export GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# export OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

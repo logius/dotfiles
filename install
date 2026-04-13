@@ -6,19 +6,23 @@ ln -nfs "$(pwd)/.irbrc"             "$HOME/.irbrc"
 ln -nfs "$(pwd)/zsh/.zshrc"         "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"           "$HOME/.zsh"
 ln -nfs "$(pwd)/.ruby-version"      "$HOME/.ruby-version"
-ln -nfs "$(pwd)/hammerspoon"        "$HOME/.hammerspoon"
+ln -nfs "$(pwd)/hammerspoon/"       "$HOME/.hammerspoon"
 ln -nfs "$(pwd)/.gitignore_global"  "$HOME/.gitignore_global"
 
-# Copy powerlines
-for file in ./powerline-fonts/Meslo/*.otf; do
-  cp -f "$file" "$HOME/Library/Fonts/"
-done
-
-git config --global user.email "gabrielglescinskas@gmail.com"
-git config --global user.name "Gabriel G. Lescinskas"
+# Git config (machine-agnostic only — user.email / user.name live in ~/.zshrc.local)
 git config --global core.excludesfile "$HOME/.gitignore_global"
 git config --global color.diff always
 git config --global merge.ff only
 git config --global push.default current
 git config --global remote.origin.prune true
 git config --global rebase.autosquash true
+
+# Machine-specific secrets / identity live in zsh/.zshrc.local (gitignored)
+# and are symlinked to ~/.zshrc.local. Bootstrap from the example template
+# on first run.
+if [ ! -f "$(pwd)/zsh/.zshrc.local" ]; then
+  cp "$(pwd)/zsh/.zshrc.local.example" "$(pwd)/zsh/.zshrc.local"
+  chmod 600 "$(pwd)/zsh/.zshrc.local"
+  echo "⚠️  Created zsh/.zshrc.local from template — edit it with your email and secrets."
+fi
+ln -nfs "$(pwd)/zsh/.zshrc.local" "$HOME/.zshrc.local"
