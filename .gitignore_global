@@ -1,13 +1,33 @@
-.powrc
-coffeelint.json
-.powder
-.capistrano
+# macOS
+.DS_Store
+._*
+Icon?
+
+# Editor/IDE backup & scratch files
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+
+# AI / agent local state (per-checkout, not shared)
+.claude/
+.cursor/
+.aider*
+
+# Local env overrides (committed env files stay committed)
 .env
-.DS_store
-public/public
-.env.development
-.git-project
+.env.local
+.env.*.local
+.envrc.local
+
+# Ruby / Rails dev artifacts
 dump.rdb
 spec/examples.txt
+.byebug_history
+.rspec_status
+
+# ctags
+tags
 .tags
 .tags*
