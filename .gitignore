@@ -1,0 +1,6 @@
+.DS_Store
+zsh/.zshrc.local
+
+# Per-checkout AI tool state (also in global gitignore, but keep here for
+# the case where this repo is cloned on a machine without the global set up)
+.claude/
